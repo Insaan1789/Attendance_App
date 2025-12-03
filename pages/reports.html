@@ -1,0 +1,56 @@
+<div class="app-container">
+    <div id="sidebar-container"></div>
+    <main class="main-content">
+        <header class="header">
+            <h1 class="page-title">Attendance Reports</h1>
+        </header>
+
+        <div class="card" style="margin-bottom: 2rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="form-group">
+                    <label class="form-label">Select Class</label>
+                    <select class="form-select" id="classSelect">
+                        <option value="">All Classes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Start Date</label>
+                    <input type="date" class="form-input" id="startDate">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">End Date</label>
+                    <input type="date" class="form-input" id="endDate">
+                </div>
+                <div class="form-group" style="display: flex; align-items: flex-end;">
+                    <button id="generateBtn" class="btn btn-primary" style="width: 100%;">Generate Report</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="report-container" style="display: none;">
+            <div style="display: flex; justify-content: flex-end; margin-bottom: 1rem; gap: 0.5rem;">
+                <button id="exportCsvBtn" class="btn btn-secondary">Export CSV</button>
+                <button id="exportPdfBtn" class="btn btn-secondary">Export PDF</button>
+            </div>
+
+            <div class="card table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Roll No</th>
+                            <th>Name</th>
+                            <th>Total Sessions</th>
+                            <th>Present</th>
+                            <th>Absent</th>
+                            <th>OD</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportList">
+                        <!-- Report data will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>

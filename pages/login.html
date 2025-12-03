@@ -1,0 +1,18 @@
+<div class="login-container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div class="card" style="width: 100%; max-width: 400px;">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">Teacher Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-input" type="email" id="email" placeholder="teacher@school.com" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <input class="form-input" type="password" id="password" placeholder="password123" required>
+            </div>
+            <div id="errorMsg" class="badge badge-danger"
+                style="display: none; margin-bottom: 1rem; text-align: center;"></div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+        </form>
+    </div>
+</div>

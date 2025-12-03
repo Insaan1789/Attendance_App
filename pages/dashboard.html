@@ -1,0 +1,31 @@
+<div class="app-container">
+    <div id="sidebar-container"></div>
+    <main class="main-content">
+        <header class="header">
+            <h1 class="page-title">Dashboard</h1>
+            <div id="user-info" style="font-weight: 500;"></div>
+        </header>
+
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+            <div class="card">
+                <h3 style="margin-top: 0; color: var(--gray-800);">Today's Sessions</h3>
+                <p id="today-sessions-count"
+                    style="font-size: 2rem; font-weight: 700; color: var(--primary-color); margin: 0.5rem 0;">0</p>
+                <p style="color: var(--gray-800); font-size: 0.875rem;">Scheduled for today</p>
+            </div>
+            <div class="card">
+                <h3 style="margin-top: 0; color: var(--gray-800);">Pending Requests</h3>
+                <p style="font-size: 2rem; font-weight: 700; color: var(--warning); margin: 0.5rem 0;">0</p>
+                <p style="color: var(--gray-800); font-size: 0.875rem;">Leave requests to review</p>
+            </div>
+        </div>
+
+        <h2 style="margin-bottom: 1rem;">Quick Actions</h2>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="#create-session" class="btn btn-primary">Create New Session</a>
+            <a href="#reports" class="btn btn-secondary">View Reports</a>
+            <a href="#leave-requests" class="btn btn-secondary">Leave Requests</a>
+        </div>
+    </main>
+</div>

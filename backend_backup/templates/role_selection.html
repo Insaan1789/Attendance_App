@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section">
+    <h1>Welcome to Attendance App</h1>
+    <p>Please select your role to continue.</p>
+
+    <div class="role-selection">
+        <a href="{{ url_for('auth.login', role='teacher') }}" class="role-card">
+            <h3>Teacher</h3>
+            <p>Manage classes and attendance</p>
+        </a>
+        <a href="{{ url_for('auth.login', role='student') }}" class="role-card">
+            <h3>Student</h3>
+            <p>Mark attendance and view records</p>
+        </a>
+    </div>
+</div>
+
+<style>
+    .role-selection {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .role-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: var(--shadow);
+        text-decoration: none;
+        color: var(--text-color);
+        width: 200px;
+        transition: transform 0.2s;
+        border: 2px solid transparent;
+    }
+
+    .role-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--primary-color);
+    }
+
+    .role-card h3 {
+        color: var(--primary-color);
+        margin-top: 0;
+    }
+</style>
+{% endblock %}
